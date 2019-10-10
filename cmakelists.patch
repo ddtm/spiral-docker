@@ -1,0 +1,11 @@
+--- CMakeLists.txt	2019-10-09 21:39:55.000000000 +0100
++++ CMakeLists.txt	2019-10-09 21:41:01.000000000 +0100
+@@ -45,6 +45,8 @@
+ add_subdirectory(${PROJECT_SOURCE_DIR}/third_party/glog)
+ 
+ set(BUILD_VULKAN OFF CACHE BOOL "Build the Vulkan library")
++set(BUILD_SAMPLES OFF CACHE BOOL "Build sample programs")
++set(BUILD_TESTS OFF CACHE BOOL "Build test programs")
+ add_subdirectory(${PROJECT_SOURCE_DIR}/third_party/swiftshader)
+ 
+ set(PYBIND11_PYTHON_VERSION ${Python3_VERSION})

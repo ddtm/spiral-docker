@@ -1,0 +1,11 @@
+--- setup.py	2019-10-09 21:25:18.000000000 +0100
++++ setup.py	2019-10-09 21:26:41.000000000 +0100
+@@ -69,7 +69,7 @@
+ 
+   def build_cmake(self, ext):
+     cfg = "Debug" if self.debug else "Release"
+-    subprocess.check_call(["cmake", "--build", ".", "--config", cfg],
++    subprocess.check_call(["cmake", "--build", ".", "--config", cfg, "-j 4"],
+                           cwd=self.build_temp)
+ 
+ 
